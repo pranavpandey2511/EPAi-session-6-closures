@@ -1,9 +1,10 @@
 import pytest
-from numpy.random import randint
+# from numpy.random import randint
 import closures
 import os
 import inspect
 import re
+import random
 
 README_CONTENT_CHECK_FOR = [
     'dict',
@@ -147,7 +148,10 @@ def test_func_count_custom():
     dict_1 = dict()
     fc = closures.counter_users(dict_1)
 
-    a, b, c, d = randint(1, 10, 4)
+    a = random.randint(1, 10)
+    b = random.randint(1, 10)
+    c = random.randint(1, 10)
+    d = random.randint(1, 10)
 
     for _ in range(a):
         fc(add, 2, 5)
@@ -166,7 +170,10 @@ def test_func_count_custom():
     dict_2 = dict()
     fc_new = closures.counter_users(dict_2)
 
-    a, b, c, d = randint(1, 10, 4)
+    a = random.randint(1, 10)
+    b = random.randint(1, 10)
+    c = random.randint(1, 10)
+    d = random.randint(1, 10)
 
     for _ in range(a):
         fc_new(add, 2, 5)

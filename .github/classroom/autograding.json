@@ -3,7 +3,6 @@
       {
         "name": "closures_test",
         "setup": "sudo -H pip3 install pytest",
-        "numpy": "sudo -H pip3 install numpy",
         "run": "pytest -vv",
         "input": "",
         "output": "",
