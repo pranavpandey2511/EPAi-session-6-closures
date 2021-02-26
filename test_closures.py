@@ -30,7 +30,7 @@ def test_readme_contents():
     readme_words = readme.read().split()
     readme.close()
     assert len(
-        readme_words) >= 150, "Make your README.md file interesting! Add atleast 150 words"
+        readme_words) >= 100, "Make your README.md file interesting! Add atleast 100 words"
 
 
 def test_readme_proper_description():
@@ -82,7 +82,7 @@ def test_doc_checker():
     dc = closures.scan_fn(50)
     fib = closures.fib()
     assert dc(
-        closuresfib=closures.counter) == True, "Something wrong with the doc_check function."
+        closures.counter) == True, "Something wrong with the doc_check function."
     assert dc(fib) == True, "Something wrong with the doc_check function."
 
 
