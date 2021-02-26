@@ -4,7 +4,6 @@ import closures
 import os
 import inspect
 import re
-import test_closures
 
 README_CONTENT_CHECK_FOR = [
     'dict',
@@ -58,19 +57,6 @@ def test_function_name_had_cap_letter():
     for function in functions:
         assert len(re.findall(
             '([A-Z])', function[0])) == 0, "You have used Capital letter(s) in your function names"
-
-
-def test_function_count():
-    functions = inspect.getmembers(test_closures, inspect.isfunction)
-    assert len(functions) > 15, 'Test cases seems to be low. Work harder man...'
-
-
-def test_function_repeatations():
-    functions = inspect.getmembers(test_closures, inspect.isfunction)
-    names = []
-    for function in functions:
-        names.append(function)
-    assert len(names) == len(set(names)), 'Test cases seems to be repeating...'
 
 
 def test_function_doc_string():
